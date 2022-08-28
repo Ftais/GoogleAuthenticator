@@ -45,7 +45,7 @@ def config_file_read(file_path):
 
 
 def run_demo1():
-    get_google_secret_code(secret="BQ6KK6M5SUB44IJ5")
+    print(get_google_secret_code(secret="BQ6KK6M5SUB44IJ5"))
 
 def run_demo2():
     bybit_f2a = config_file_read('secret_code.json')
