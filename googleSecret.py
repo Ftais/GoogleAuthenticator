@@ -40,7 +40,7 @@ def config_file_read(file_path):
     json_file = os.path.join(os.path.dirname(__file__),file_path)
     with open(json_file,"r") as f:
         json_f2a = json.loads(f.read())
-        f.close
+        f.close()
     return json_f2a
 
 
