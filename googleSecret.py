@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-import hmac, base64, struct, hashlib, time
-
+import hmac, base64, struct, hashlib
+import os, time
+import json
 
 def get_google_secret_code(secret):
     intervals_no = int(time.time()) // 30
@@ -34,6 +35,13 @@ def continued_print_google_code(secret):
                     time.sleep(2)
             else:
                 break
+
+def config_file_read(file_path):
+    json_file = os.path.join(os.path.dirname(__file__),file_path)
+    with open(json_file,"r") as f:
+        json_f2a = json.loads(f.read())
+        f.close
+    return json_f2a
 
 
 def run_demo():
